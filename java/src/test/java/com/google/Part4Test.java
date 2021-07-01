@@ -29,7 +29,7 @@ public class Part4Test extends TestBase {
     videoPlayer.flagVideo("amazing_cats_video_id", "dont_like_cats");
     videoPlayer.flagVideo("amazing_cats_video_id", "dont_like_cats");
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(2, lines.length, outputStream.toString());
     assertThat(lines[0],
         containsString("Successfully flagged video: Amazing Cats (reason: dont_like_cats)"));
@@ -48,7 +48,7 @@ public class Part4Test extends TestBase {
     videoPlayer.flagVideo("amazing_cats_video_id");
     videoPlayer.playVideo("amazing_cats_video_id");
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(2, lines.length, outputStream.toString());
     assertThat(lines[0],
         containsString("Successfully flagged video: Amazing Cats (reason: Not supplied)"));
@@ -64,7 +64,7 @@ public class Part4Test extends TestBase {
     videoPlayer.flagVideo("life_at_google_video_id");
     videoPlayer.flagVideo("nothing_video_id");
     videoPlayer.playRandomVideo();
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(6, lines.length, outputStream.toString());
     assertThat(lines[0],
         containsString("Successfully flagged video: Funny Dogs (reason: Not supplied)"));
@@ -86,7 +86,7 @@ public class Part4Test extends TestBase {
     videoPlayer.createPlaylist("my_playlist");
     videoPlayer.addVideoToPlaylist("my_playlist", "amazing_cats_video_id");
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(3, lines.length, outputStream.toString());
     assertThat(lines[0],
         containsString("Successfully flagged video: Amazing Cats (reason: Not supplied)"));
@@ -103,7 +103,7 @@ public class Part4Test extends TestBase {
     videoPlayer.flagVideo("amazing_cats_video_id", "dont_like_cats");
     videoPlayer.showPlaylist("my_playlist");
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(5, lines.length, outputStream.toString());
     assertThat(lines[0],
         containsString("Successfully created new playlist: my_playlist"));
@@ -120,7 +120,7 @@ public class Part4Test extends TestBase {
     videoPlayer.flagVideo("amazing_cats_video_id", "dont_like_cats");
     videoPlayer.showAllVideos();
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(7, lines.length, outputStream.toString());
     assertThat(lines[0],
         containsString("Successfully flagged video: Amazing Cats (reason: dont_like_cats)"));
@@ -144,7 +144,7 @@ public class Part4Test extends TestBase {
     videoPlayer.flagVideo("amazing_cats_video_id", "dont_like_cats");
     videoPlayer.searchVideos("cat");
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(5, lines.length, outputStream.toString());
     assertThat(lines[0],
         containsString("Successfully flagged video: Amazing Cats (reason: dont_like_cats)"));
@@ -164,7 +164,7 @@ public class Part4Test extends TestBase {
     videoPlayer.flagVideo("amazing_cats_video_id", "dont_like_cats");
     videoPlayer.searchVideosWithTag("#cat");
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(5, lines.length, outputStream.toString());
     assertThat(lines[0],
         containsString("Successfully flagged video: Amazing Cats (reason: dont_like_cats)"));
@@ -183,7 +183,7 @@ public class Part4Test extends TestBase {
     videoPlayer.flagVideo("amazing_cats_video_id", "dont_like_cats");
     videoPlayer.showPlaying();
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(4, lines.length, outputStream.toString());
     assertThat(lines[0], containsString("Playing video: Amazing Cats"));
     assertThat(lines[1], containsString("Stopping video: Amazing Cats"));
@@ -199,7 +199,7 @@ public class Part4Test extends TestBase {
     videoPlayer.flagVideo("amazing_cats_video_id", "dont_like_cats");
     videoPlayer.showPlaying();
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(5, lines.length, outputStream.toString());
     assertThat(lines[0], containsString("Playing video: Amazing Cats"));
     assertThat(lines[1], containsString("Pausing video: Amazing Cats"));
@@ -215,7 +215,7 @@ public class Part4Test extends TestBase {
     videoPlayer.flagVideo("another_cat_video_id", "dont_like_cats");
     videoPlayer.showPlaying();
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(3, lines.length, outputStream.toString());
     assertThat(lines[0], containsString("Playing video: Amazing Cats"));
     assertThat(lines[1],
@@ -229,7 +229,7 @@ public class Part4Test extends TestBase {
     videoPlayer.flagVideo("amazing_cats_video_id", "dont_like_cats");
     videoPlayer.allowVideo("amazing_cats_video_id");
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(2, lines.length, outputStream.toString());
     assertThat(lines[0],
         containsString("Successfully flagged video: Amazing Cats (reason: dont_like_cats)"));
@@ -263,7 +263,7 @@ public class Part4Test extends TestBase {
     videoPlayer.allowVideo("amazing_cats_video_id");
     videoPlayer.showPlaylist("my_playlist");
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(8, lines.length, outputStream.toString());
     assertThat(lines[0],
         containsString("Successfully created new playlist: my_playlist"));

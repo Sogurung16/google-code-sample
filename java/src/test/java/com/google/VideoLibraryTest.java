@@ -25,7 +25,7 @@ public class VideoLibraryTest {
 
   @Test
   public void testLibraryParsesTagsCorrectly() {
-    var video = videoLibrary.getVideo("amazing_cats_video_id");
+    Video video = videoLibrary.getVideo("amazing_cats_video_id");
 
     assertNotNull(video);
     assertEquals("Amazing Cats", video.getTitle());
@@ -35,7 +35,7 @@ public class VideoLibraryTest {
 
   @Test
   public void testLibraryParsesVideoCorrectlyWithoutTags() {
-    var video = videoLibrary.getVideo("nothing_video_id");
+    Video video = videoLibrary.getVideo("nothing_video_id");
 
     assertNotNull(video);
     assertEquals("Video about nothing", video.getTitle());

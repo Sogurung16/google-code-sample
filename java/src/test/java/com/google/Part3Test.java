@@ -15,7 +15,7 @@ public class Part3Test extends TestBase {
 
     videoPlayer.searchVideos("cat");
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(5, lines.length, outputStream.toString());
     assertThat(lines[0], containsString("Here are the results for cat:"));
     assertThat(lines[1], containsString("1) Amazing Cats (amazing_cats_video_id) [#cat #animal]"));
@@ -34,7 +34,7 @@ public class Part3Test extends TestBase {
 
     videoPlayer.searchVideos("cat");
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(6, lines.length, outputStream.toString());
     assertThat(lines[0], containsString("Here are the results for cat:"));
     assertThat(lines[1], containsString("1) Amazing Cats (amazing_cats_video_id) [#cat #animal]"));
@@ -53,7 +53,7 @@ public class Part3Test extends TestBase {
 
     videoPlayer.searchVideos("cat");
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(5, lines.length, outputStream.toString());
     assertThat(lines[0], containsString("Here are the results for cat:"));
     assertThat(lines[1], containsString("1) Amazing Cats (amazing_cats_video_id) [#cat #animal]"));
@@ -72,7 +72,7 @@ public class Part3Test extends TestBase {
 
     videoPlayer.searchVideos("cat");
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(5, lines.length, outputStream.toString());
     assertThat(lines[0], containsString("Here are the results for cat:"));
     assertThat(lines[1], containsString("1) Amazing Cats (amazing_cats_video_id) [#cat #animal]"));
@@ -98,7 +98,7 @@ public class Part3Test extends TestBase {
 
     videoPlayer.searchVideosWithTag("#cat");
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(5, lines.length, outputStream.toString());
     assertThat(lines[0], containsString("Here are the results for #cat:"));
     assertThat(lines[1], containsString("1) Amazing Cats (amazing_cats_video_id) [#cat #animal]"));
@@ -117,7 +117,7 @@ public class Part3Test extends TestBase {
 
     videoPlayer.searchVideosWithTag("#cat");
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(6, lines.length, outputStream.toString());
     assertThat(lines[0], containsString("Here are the results for #cat:"));
     assertThat(lines[1], containsString("1) Amazing Cats (amazing_cats_video_id) [#cat #animal]"));
@@ -136,7 +136,7 @@ public class Part3Test extends TestBase {
 
     videoPlayer.searchVideosWithTag("#cat");
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(5, lines.length, outputStream.toString());
     assertThat(lines[0], containsString("Here are the results for #cat:"));
     assertThat(lines[1], containsString("1) Amazing Cats (amazing_cats_video_id) [#cat #animal]"));

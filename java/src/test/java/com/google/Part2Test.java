@@ -42,7 +42,7 @@ public class Part2Test extends TestBase {
     videoPlayer.addVideoToPlaylist("my_playlist", "amazing_cats_video_id");
     videoPlayer.addVideoToPlaylist("my_PLAYlist", "amazing_cats_video_id");
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals( 3, lines.length, outputStream.toString());
     assertThat(lines[0], containsString("Successfully created new playlist: my_playlist"));
     assertThat(lines[1], containsString("Added video to my_playlist: Amazing Cats"));
@@ -55,7 +55,7 @@ public class Part2Test extends TestBase {
     videoPlayer.addVideoToPlaylist("my_playlist", "amazing_cats_video_id");
     videoPlayer.addVideoToPlaylist("my_playlist", "some_other_video_id");
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(3, lines.length, outputStream.toString());
     assertThat(lines[0],
         containsString("Successfully created new playlist: my_playlist"));
@@ -92,7 +92,7 @@ public class Part2Test extends TestBase {
     videoPlayer.createPlaylist("another_playlist");
     videoPlayer.showAllPlaylists();
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(5, lines.length, outputStream.toString());
     assertThat(lines[2], containsString("Showing all playlists:"));
     assertThat(lines[3], containsString("another_playlist"));
@@ -106,7 +106,7 @@ public class Part2Test extends TestBase {
     videoPlayer.addVideoToPlaylist("my_playlist", "amazing_cats_video_id");
     videoPlayer.showPlaylist("my_PLAYlist");
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(6, lines.length, outputStream.toString());
     assertThat(lines[0],
         containsString("Successfully created new playlist: my_playlist"));
@@ -127,7 +127,7 @@ public class Part2Test extends TestBase {
     videoPlayer.addVideoToPlaylist("mY_plaYList", "amazing_cats_video_id");
     videoPlayer.showPlaylist("mY_plaYList");
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(8, lines.length, outputStream.toString());
     assertThat(lines[5], containsString("Showing playlist: mY_plaYList"));
     assertThat(lines[6],
@@ -151,7 +151,7 @@ public class Part2Test extends TestBase {
     videoPlayer.removeFromPlaylist("my_playlist", "amazing_cats_video_id");
     videoPlayer.removeFromPlaylist("my_PLAYlist", "amazing_cats_video_id");
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(4, lines.length, outputStream.toString());
     assertThat(lines[0],
         containsString("Successfully created new playlist: my_PLAYlist"));
@@ -167,7 +167,7 @@ public class Part2Test extends TestBase {
     videoPlayer.createPlaylist("my_playlist");
     videoPlayer.removeFromPlaylist("my_playlist", "amazing_cats_video_id");
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(2, lines.length, outputStream.toString());
     assertThat(lines[1],
         containsString("Cannot remove video from my_playlist: Video is not in playlist"));
@@ -179,7 +179,7 @@ public class Part2Test extends TestBase {
     videoPlayer.addVideoToPlaylist("my_PLAYlist", "amazing_cats_video_id");
     videoPlayer.removeFromPlaylist("my_playlist", "some_other_video_id");
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(3, lines.length, outputStream.toString());
     assertThat(lines[0],
         containsString("Successfully created new playlist: my_playlist"));
@@ -204,7 +204,7 @@ public class Part2Test extends TestBase {
     videoPlayer.clearPlaylist("my_PLAYlist");
     videoPlayer.showPlaylist("my_playlist");
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(7, lines.length, outputStream.toString());
     assertThat(lines[0],
         containsString("Successfully created new playlist: my_playlist"));
@@ -231,7 +231,7 @@ public class Part2Test extends TestBase {
     videoPlayer.createPlaylist("my_playlist");
     videoPlayer.deletePlaylist("my_PLAYlist");
 
-    var lines = getOutputLines();
+    String[] lines = getOutputLines();
     assertEquals(2, lines.length, outputStream.toString());
     assertThat(lines[0],
         containsString("Successfully created new playlist: my_playlist"));

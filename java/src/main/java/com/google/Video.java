@@ -9,6 +9,7 @@ class Video {
   private final String title;
   private final String videoId;
   private final List<String> tags;
+  private boolean isFlagged;
 
   Video(String title, String videoId, List<String> tags) {
     this.title = title;
@@ -30,4 +31,14 @@ class Video {
   List<String> getTags() {
     return tags;
   }
+
+  Boolean getFlagStatus(){
+    return isFlagged;
+  }
+
+  void setFlagStatus(Boolean isFlagged){
+    this.isFlagged = isFlagged;
+  }
 }
+
+

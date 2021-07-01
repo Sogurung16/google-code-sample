@@ -20,7 +20,6 @@ class VideoLibrary {
     this.videos = new HashMap<>();
     try {
       File file = new File(this.getClass().getResource("/videos.txt").getFile());
-
       Scanner scanner = new Scanner(file);
       while (scanner.hasNextLine()) {
         String line = scanner.nextLine();
