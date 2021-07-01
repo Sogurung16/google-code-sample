@@ -151,6 +151,9 @@ public class VideoPlayer {
                           currentVideo.getTags().toString().replace(",", "")+
                           " - PAUSED");
         }
+        else{
+          System.out.println("No video is currently playing");
+        }
       }
       catch(Exception e){
 
